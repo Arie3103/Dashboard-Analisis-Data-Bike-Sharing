@@ -66,7 +66,7 @@ elif menu == "EDA":
     st.pyplot(fig)
     
     # 3. Penyewaan Berdasarkan Hari dalam Minggu
-    hour_data['day_of_week'] = hour_data['dteday'].dt.day_name(locale='id_ID')
+    hour_data['day_of_week'] = hour_data['dteday'].dt.day_name()
     cnt_day_of_week = hour_data.groupby('day_of_week')['cnt'].sum().reset_index()
     day_order = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu']
     cnt_day_of_week = cnt_day_of_week.set_index('day_of_week').reindex(day_order).reset_index()
