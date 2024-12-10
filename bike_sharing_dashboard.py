@@ -186,31 +186,43 @@ elif menu == "Insight":
     st.title("Insight dari Analisis Data")
 
     st.write("""
-    ### **Ringkasan Temuan**:
-    
-    #### **1. Tren Penyewaan Sepeda**:
-    - Jumlah penyewaan sepeda meningkat secara signifikan pada tahun 2012 dibandingkan tahun 2011, menunjukkan popularitas layanan bike-sharing yang semakin tinggi.
-    - Penyewaan sepeda mencapai puncaknya pada bulan-bulan musim panas (Juli dan Agustus), sementara musim dingin (Desember dan Januari) memiliki penyewaan terendah.
-    - Hari kerja memiliki jumlah penyewaan yang lebih tinggi dibandingkan hari libur, menunjukkan bahwa sepeda lebih sering digunakan untuk keperluan sehari-hari seperti perjalanan ke tempat kerja atau sekolah.
+### **Ringkasan Temuan**:
 
-    #### **2. Pengaruh Kondisi Cuaca**:
-    - Sebagian besar penyewaan terjadi dalam kondisi cuaca cerah, menunjukkan bahwa kenyamanan cuaca sangat memengaruhi perilaku pengguna.
-    - Cuaca buruk seperti hujan atau salju ringan secara signifikan menurunkan jumlah penyewaan.
-    - Kelembapan tinggi juga menjadi penghambat bagi pengguna untuk menyewa sepeda.
+#### **1. Total Penyewaan Sepeda per Tahun**:
+- Penyewaan sepeda meningkat secara signifikan pada tahun 2012 dibandingkan 2011. Hal ini menunjukkan bahwa layanan bike-sharing semakin populer di tahun kedua operasionalnya.
 
-    #### **3. Tipe Pengguna**:
-    - Pengguna terdaftar menyumbang mayoritas penyewaan sepeda, dibandingkan dengan pengguna kasual.
-    - Pengguna kasual cenderung lebih aktif pada akhir pekan dan musim panas, sedangkan pengguna terdaftar lebih konsisten sepanjang tahun.
+#### **2. Total Penyewaan Sepeda Bulanan**:
+- Jumlah penyewaan sepeda mencapai puncaknya pada bulan Juli dan Agustus (musim panas).
+- Bulan Desember dan Januari (musim dingin) memiliki jumlah penyewaan terendah.
 
-    #### **4. Analisis Berdasarkan Musim**:
-    - Musim gugur dan musim panas memiliki jumlah penyewaan tertinggi, sedangkan musim semi dan musim dingin menunjukkan jumlah penyewaan yang lebih rendah.
-    - Kondisi cuaca yang nyaman pada musim gugur dan musim panas menjadi pendorong utama peningkatan penyewaan.
+#### **3. Penyewaan Berdasarkan Hari dalam Minggu**:
+- Hari kerja memiliki jumlah penyewaan yang lebih tinggi dibandingkan akhir pekan. Hal ini menunjukkan bahwa sepeda lebih banyak digunakan untuk aktivitas sehari-hari seperti perjalanan ke tempat kerja atau sekolah.
 
-    #### **5. Hasil Clustering**:
-    - **Cluster 2**: Suhu tinggi, kelembapan sedang, dan kecepatan angin sedang memiliki jumlah penyewaan tertinggi.
-    - **Cluster 0**: Suhu sedang, kelembapan tinggi, dan kecepatan angin rendah memiliki jumlah penyewaan terendah.
-    - **Cluster 1**: Suhu rendah, kelembapan sedang, dan kecepatan angin tinggi memiliki jumlah penyewaan sedang.
-    """)
+#### **4. Penyewaan Berdasarkan Kondisi Cuaca**:
+- Penyewaan sepeda paling banyak terjadi dalam kondisi cuaca cerah (kategori 1).
+- Penyewaan menurun signifikan pada kondisi cuaca buruk seperti hujan ringan atau deras.
+
+#### **5. Penyewaan Berdasarkan Tipe Pengguna**:
+- Pengguna terdaftar menyumbang mayoritas penyewaan sepeda dibandingkan pengguna kasual.
+- Pengguna kasual cenderung lebih aktif pada akhir pekan dan musim panas.
+
+#### **6. Penyewaan Berdasarkan Musim**:
+- Musim panas dan musim gugur memiliki jumlah penyewaan tertinggi, menunjukkan pengaruh suhu hangat dan cuaca nyaman terhadap penggunaan sepeda.
+- Musim dingin memiliki jumlah penyewaan terendah, kemungkinan besar karena suhu rendah dan cuaca ekstrem.
+
+#### **7. Penyewaan Bulanan per Tahun**:
+- Pola penyewaan serupa terlihat di tahun 2011 dan 2012, tetapi jumlah penyewaan pada tahun 2012 secara konsisten lebih tinggi di setiap bulan.
+- Peningkatan terbesar terjadi pada bulan Januari hingga Maret, yang mungkin mencerminkan promosi atau perbaikan layanan.
+
+#### **8. Penyewaan Berdasarkan Hari Kerja vs Hari Libur**:
+- Penyewaan lebih tinggi pada hari kerja dibandingkan hari libur, mencerminkan penggunaan sepeda untuk kebutuhan sehari-hari.
+
+#### **9. Hasil Clustering Berdasarkan Variabel Lingkungan**:
+- **Cluster 2**: Kondisi suhu tinggi, kelembapan sedang, dan kecepatan angin sedang memiliki jumlah penyewaan tertinggi.
+- **Cluster 0**: Kondisi suhu sedang, kelembapan tinggi, dan kecepatan angin rendah memiliki jumlah penyewaan terendah.
+- **Cluster 1**: Kondisi suhu rendah, kelembapan sedang, dan kecepatan angin tinggi memiliki jumlah penyewaan sedang.
+- Clustering ini membantu memahami bagaimana variabel lingkungan memengaruhi pola penggunaan sepeda.
+""")
 
     st.write("""
     ### **Rekomendasi Operasional**:
