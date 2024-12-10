@@ -68,12 +68,13 @@ elif menu == "EDA":
     # 3. Penyewaan Berdasarkan Hari dalam Minggu
     hour_data['day_of_week'] = hour_data['dteday'].dt.day_name()
     cnt_day_of_week = hour_data.groupby('day_of_week')['cnt'].sum().reset_index()
-    day_order = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu']
+    day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     cnt_day_of_week = cnt_day_of_week.set_index('day_of_week').reindex(day_order).reset_index()
+
     st.subheader("3. Penyewaan Berdasarkan Hari dalam Minggu")
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.barplot(data=cnt_day_of_week, x='day_of_week', y='cnt', palette='coolwarm', ax=ax)
-    ax.set_title("Penyewaan Sepeda Berdasarkan Hari")
+    ax.set_title("Penyewaan Berdasarkan Hari")
     ax.set_xlabel("Hari")
     ax.set_ylabel("Total Penyewaan")
     plt.xticks(rotation=45)
